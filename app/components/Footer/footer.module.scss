@@ -1,0 +1,33 @@
+.wrapper{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: var(--back-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px var(--cont) 20px var(--cont);
+    position: relative;
+     color: gray;
+    font-size: 15px;
+    @media screen and (max-width: 767px) {
+        padding: 20px var(--cont_mobile) 20px var(--cont_mobile);
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    }
+    .p{
+        text-align: right;
+    }
+    .line{
+        position: absolute;
+        top:0;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background-color: white;
+        opacity: 0.1;
+
+    }
+}

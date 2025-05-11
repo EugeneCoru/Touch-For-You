@@ -1,0 +1,161 @@
+.wrapper{
+  position: relative;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    flex-direction: column;
+    padding-top: var(--up-h);
+    padding: var(--up-h) var(--cont) 60px var(--cont);
+    background: var(--back-color);
+    @media screen and (max-width: 767px) {
+        padding: var(--up-h) var(--cont_mobile) 60px var(--cont_mobile);
+    }
+    .ptag{
+        max-width: 475px;
+        text-align: center;
+        margin-top: 18px;
+    }
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    aspect-ratio: 1;           /* делаем контейнер квадратным */
+    margin: 0 auto;
+    margin-top: 88px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+  }
+  
+  .square {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    
+    border: 2px solid ;
+    
+    border-image: var(--neon-hover);
+    border-image-slice: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon{
+      max-width: 100%;
+      height: auto;
+      @media screen and (max-width: 480px) {
+        max-width: 70%;
+        
+    }
+    }
+    
+    
+  }
+  
+  /* Позиционирование квадратов по сторонам света */
+  .top {
+    top: 0;
+    left: 0;
+    //border-radius: 50px 0 0 0;
+    //transform: translate(-50%, 0);
+  }
+  .bottom {
+    bottom: 0;
+    right: 0;
+    //transform: translate(-50%, 0);
+  }
+  .left {
+    left: 0;
+    bottom: 0;
+    //transform: translate(0, -50%);
+  }
+  .right {
+    right: 0;
+    top: 0;
+    //transform: translate(0, -50%);
+  }
+  
+  /* Стиль бутылки в центре */
+  .bottleImage {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    
+    transform: translate(-50%, -50%);  /* центрируем изображение бутылки */
+    width: 30%;
+    max-width: 200px;
+    transform-origin: 50% 50%;        /* вращение вокруг центра */
+    cursor: pointer;
+    transition: transform 4s ease-out; /* плавное вращение с замедлением */
+    z-index: 2;
+  }
+  
+  /* Убираем курсор и изменяем прозрачность во время вращения (необязательно) */
+  .bottleImage.spinning {
+    cursor: default;
+    opacity: 1;
+  }
+  
+  /* Неоновая подсветка выбранного квадрата */
+  @keyframes neonPulse {
+    0%, 100% {
+      box-shadow: 0 0 5px var(--pink), 0 0 15px var(--blue);
+    }
+    50% {
+      box-shadow: 0 0 15px 5px var(--pink);
+    }
+  }
+  .square.selected {
+    border-color: var(--pink);
+    animation: neonPulse 1.5s infinite alternate;
+    z-index: 1;
+  }
+  
+  /* Модальное окно (оверлей на всю страницу) */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Контент модального окна */
+  .modalContent {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+  }
+  .modalContent h2 {
+    margin-top: 0;
+  }
+  .modalContent p {
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  .modalContent button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background: #555;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .modalContent button:hover {
+    background: #6c6c6c;
+  }
+}

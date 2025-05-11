@@ -1,0 +1,137 @@
+.wrapper {
+    position: relative;
+    z-index: 1000;
+    display: none;
+    @media screen and (max-width: 860px) {
+      display: flex;
+    }
+  }
+  
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: calc(var(--burger-size) * 0.6);
+    padding: 15% 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+  
+    .line {
+      height: 20%;
+      width: 100%;
+      background-color: var(--burger-color);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+  
+    &:not(.open):hover {
+      .line {
+        &:first-child { transform: translateX(25%) scaleX(0.5); }
+        &:last-child { transform: translateX(-25%) scaleX(0.5); }
+      }
+    }
+  
+    &.open {
+      .line {
+        &:first-child {
+          transform: rotate(45deg) translate(25%, 250%);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg) translate(25%, -250%);
+        }
+      }
+
+      &:hover {
+        .line {
+          &:first-child {
+            transform: rotate(45deg) translate(0%, 250%);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            transform: rotate(-45deg) translate(0%, -250%);
+          }
+    }
+  }
+  }
+}
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--back-color);
+    box-shadow: -2px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 999;
+  
+    &.active {
+      right: 0;
+    }
+  }
+  
+  .menuContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  ;
+
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      width: 100vw;
+      right: -100vw;
+      
+      &.active {
+        right: 0;
+      }
+    }
+  }
+
+
+
+
+//nav
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 33px;
+  &.active{
+      display: none;
+  }
+  
+  .a{
+      &:hover{
+          opacity: .5;
+      }
+
+     
+  }
+  @media screen and (max-width: 860px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+  }
+  
+  .btn{
+      display: none;
+      @media screen and (max-width: 860px) {
+          display: flex;
+      }
+  }
+  
+}

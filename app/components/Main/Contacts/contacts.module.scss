@@ -1,0 +1,82 @@
+
+
+.wrapper{
+    position: relative;
+    padding: var(--up-h) var(--cont) 50px var(--cont);
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: var(--back-color);
+
+        @media screen and (max-width: 767px) {
+            padding: var(--up-h) var(--cont_mobile) 50px var(--cont_mobile);
+        }
+
+
+
+    .cont{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .cont_content{
+            font-size: 20px;
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+            >ul>li{
+                list-style-type: none;
+                margin-bottom: 20px;
+            }
+
+        }
+        .cont_content_a{
+            font-weight:100;
+            text-decoration: none;
+            outline: none;
+            list-style-type: none;
+            background: var(--neon);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                transition: .3s;
+                &:hover{
+                    transition: .3s;
+                    opacity: 0.5;
+                }
+        }
+
+    }
+    .cont_link{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        .cont_link_qr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .cont_link_qr_text{
+                background: var(--neon);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                transition: .3s;
+                &:hover{
+                    transition: .3s;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

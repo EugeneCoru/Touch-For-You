@@ -1,0 +1,29 @@
+.glow {
+    position: absolute;
+    width: var(--glow-size);
+    height: var(--glow-size);
+    // background: radial-gradient(
+    //   circle at center,
+    //   var(--glow-color),
+    //   transparent 70%
+    // );
+    background: var(--glow-color);
+    border-radius: 50%;
+    filter: blur(var(--glow-blur));
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: flicker var(--glow-speed) ease-in-out;
+    mix-blend-mode: screen;
+    z-index: 0;
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0.1;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }

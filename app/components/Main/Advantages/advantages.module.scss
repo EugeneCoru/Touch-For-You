@@ -1,0 +1,192 @@
+
+
+.wrapper{    
+    overflow-x: hidden;
+    overflow-y: hidden;  
+    position: relative; 
+    padding: var(--up-h) var(--cont) 113px var(--cont);
+    @media screen and (max-width: 767px) {       
+        padding: var(--up-h) var(--cont_mobile) 113px var(--cont_mobile);
+    }
+    
+    .title{
+        text-align: right;
+        padding-bottom:  var(--down-h);
+        
+
+    }
+    @media screen and (max-width: 860px) {       
+        
+   
+    .shadow_container_up{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10%; /* Регулируйте высоту градиента */
+        background: linear-gradient(
+            to bottom,
+          rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+          rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+        );
+        pointer-events: none;
+        z-index: 1;
+
+    }
+    .shadow_container_down{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10%; /* Регулируйте высоту градиента */
+        background: linear-gradient(
+            to top,
+          rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+          rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+        );
+        pointer-events: none;
+        z-index: 1;
+
+    }
+}
+    
+    
+    
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
+    
+    
+    .cont_video{
+        position: relative;
+        display: inline-block;
+        height: auto;
+        
+        margin: 0 auto;
+       @media screen and (max-width: 860px) {
+        max-width: 100%; /* Убираем ограничение ширины */
+        margin: 0;
+       }
+      
+
+       .video{
+        display: block;
+        width: 80%;
+        height: auto; /* Сохраняет пропорции */
+        object-fit: cover;
+        @media screen and (max-width: 860px) {
+            min-height: 300px; /* Фиксированная высота для мобилок */
+            object-position: center top;
+            opacity: 0.3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            
+        }
+       
+       }
+       .shadow{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10%; /* Регулируйте высоту градиента */
+        background: linear-gradient(
+            to top,
+          rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+          rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+        );
+        pointer-events: none;
+       }
+       .shadow_up{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10%; /* Регулируйте высоту градиента */
+        background: linear-gradient(
+            to bottom,
+          rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+          rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+        );
+        pointer-events: none
+       }
+       .shadow_left{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        width: 10%; 
+        background: linear-gradient(
+            to right,
+          rgba(11, 1, 13, 1) 0%,    
+          rgba(11, 1, 13, 0) 100%    
+        );
+        pointer-events: none
+       }
+       .shadow_right{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 20%;
+        width: 10%; 
+        background: linear-gradient(
+            to left,
+          rgba(11, 1, 13, 1) 0%,    
+          rgba(11, 1, 13, 0) 100%    
+        );
+        pointer-events: none
+       }
+      
+     }
+ 
+    
+    .content{
+       
+       margin-right: 107px;
+       @media screen and (max-width: 860px){
+        margin-right: 0;
+       }
+
+        & ul{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 101px;
+            @media screen and (max-width: 860px) {
+                grid-template-columns: 1fr 1fr;
+                
+            }
+            
+        }
+       
+        & ul>li{
+            text-align: center;
+            max-width: 271px;
+            text-decoration: none;
+            list-style-type: none;
+            
+
+        }
+        .icon{
+            margin-bottom: 13px;
+            max-width: 100%;
+            max-height: 100%;
+            @media screen and (max-width: 860px) {
+                max-width: 65%;
+                max-height: 65%;
+                
+            }
+        }
+
+        
+        }
+}

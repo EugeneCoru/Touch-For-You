@@ -1,0 +1,265 @@
+
+
+.wrapper{
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    background: var(--back-color);  
+    padding-top: var(--up-h);
+    width: 100%;
+    padding-bottom: 60px;
+    // @media screen and (max-width: 767px) {       
+    //     padding: var(--up-h) var(--cont_mobile) 0 var(--cont_mobile);
+    // }
+    .title{
+        padding: 0 var(--cont) 0 var(--cont);
+        z-index: 1;
+        position: relative;
+        @media screen and (max-width: 767px) {       
+            padding: 0 var(--cont_mobile) 0 var(--cont_mobile);
+        }
+    }
+
+    .cont{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        width: 100%;
+        margin-top: 103px;
+        .cont_left{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: var(--cont);
+            width: 100%;
+            @media screen and (max-width: 767px) {       
+                padding-right: var(--cont_mobile);
+                        }
+            .p_left{
+                text-align: right;
+                max-width: 530px;
+                z-index: 1;
+            }
+            
+
+
+            .img_left{
+                max-width: 629px;
+                max-height: 629px;
+                object-fit: cover;
+                border-radius: 0 300px 300px 0;
+                @media screen and (max-width: 965px) {       
+                    max-width: 310px;
+                    max-height: 310px;
+                            }
+                            @media screen and (max-width: 480px) {       
+                              max-width: 210px;
+                              max-height: 210px;
+                                      }
+        }
+    }
+        .cont_right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: var(--cont);
+            @media screen and (max-width: 767px) {       
+                padding-left: var(--cont_mobile);
+
+                        }
+            .p_right{
+                text-align: left;
+                max-width: 530px;
+                z-index: 1;
+            }
+            .img_right{
+                display: block;
+                max-width: 629px;
+                max-height: 629px;
+                object-fit: cover;
+                border-radius:  300px  0 0 300px;
+                @media screen and (max-width: 965px) {       
+                    max-width: 310px;
+                    max-height: 310px;
+                            }
+                            @media screen and (max-width: 480px) {       
+                              max-width: 210px;
+                              max-height: 210px;
+                                      }
+        }
+        }
+        
+    }
+}
+
+
+
+
+.cont_shadow{
+  position: relative;
+
+.shadow_up{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to top,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+.shadow_down{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to bottom,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to left,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_45{
+    position: absolute;
+    top: 0;
+    bottom: -50%;
+    right: 10%;
+    //height: 100px;
+    width: 40%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to left,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    transform: rotate(45deg);
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_315{
+    position: absolute;
+    top: -50%;
+    bottom: 0;
+    right: 10%;
+    width: 40%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to left,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+    transform: rotate(-45deg);
+   }
+
+   //второй блок
+   .shadow_up_2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to top,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+.shadow_down_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to bottom,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_right_2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to right,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_45_2{
+    position: absolute;
+    top: 0;
+    bottom: -50%;
+    left: 10%;
+    //height: 100px;
+    width: 40%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to left,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    transform: rotate(-225deg);
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+   }
+   .shadow_315_2{
+    position: absolute;
+    top: -50%;
+    bottom: 0;
+    left: 10%;
+    width: 40%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to left,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    
+    //background-color: red;
+    pointer-events: none;
+    //z-index: 100;
+    transform: rotate(225deg);
+   }
+
+}

@@ -1,6 +1,29 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --back-color: #0B010D;
+  /* --back-color: red; */
+  --white: white;
+  --blue: #4957F5;
+  --pink: #C307A6;
+   --neon: linear-gradient(45deg, #DB07BB, #49DAF5);
+  /* --neon: linear-gradient(45deg, #B61908, #49DAF5); */
+  --neon-hover: linear-gradient(45deg, #49DAF5, #DB07BB);
+  /* --neon-hover: linear-gradient(45deg, #49DAF5, #B61908);
+   */
+  --cont: 100px;
+  --cont_mobile: 30px;
+  --fon-h: Arial, Helvetica, sans-serif;
+  --font-p: Arial, Helvetica, sans-serif;
+  --up-h: 118px;
+  --down-h: 124px;
+  --cat-shamp: url('../public/shamp.png');
+  --cat-shamp_mobile: url('../public/shamp_mobile.png');
+  --cat-gel: url('../public/gel.png');
+  --cat-gel_mobile: url('../public/gel_mobile.png');
+
+
+  --desktop: 1210px;
+  --tablet: 860px;
+  --mobile: 480px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +37,16 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--back-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {

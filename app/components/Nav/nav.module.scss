@@ -1,0 +1,39 @@
+
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 33px;
+    &.active{
+        display: none;
+    }
+    
+    .a{
+        &:hover{
+            opacity: .5;
+        }
+
+       
+    }
+    @media screen and (max-width: 860px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .btn{
+        display: none;
+        @media screen and (max-width: 860px) {
+            display: flex;
+        }
+    }
+    
+}
+.nav > a {
+    transition: .4s;
+    &:hover{
+        line-height: var(--neon);
+    }
+}

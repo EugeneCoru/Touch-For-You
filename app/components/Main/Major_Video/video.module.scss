@@ -1,0 +1,85 @@
+
+
+.wrapper{
+    position: relative;
+    top: 0;
+    left: 0;
+    
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    width: 100%;
+
+
+    .arrow{
+      position: absolute;
+      bottom: 10%;
+      right: var(--cont);
+      max-width: 50px;
+      animation: arrowUp 2s infinite;
+      opacity: 0.6;
+      transition: .4s;
+      z-index: 5;
+      @media (max-width: 768px) {
+        right: var(--cont_mobile);
+        bottom: 5%;
+      }
+
+      
+      &:hover{
+        opacity: 1;
+      }
+    
+
+      
+    }
+  .shadow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%; /* Регулируйте высоту градиента */
+    background: linear-gradient(
+        to top,
+      rgba(11, 1, 13, 1) 0%,    /* #0B010D с 90% непрозрачности */
+      rgba(11, 1, 13, 0) 100%     /* #0B010D с 0% непрозрачности */
+    );
+    pointer-events: none;
+    z-index: 1;
+   }
+
+
+
+  .video{
+    //padding-bottom:  var(--up-h);
+    
+   
+    height: 100%;
+    width: 100%;
+    // height: 100vh;
+    object-fit: cover;
+    @media (max-width: 768px) {
+        // .fullscreen-image {
+        //   width: 100%;
+        //   height: 100vh;
+        //   // object-fit: cover;
+        //   // object-position: center center;
+        // }
+    }
+    }
+}
+
+
+@keyframes arrowUp {
+  0%, 100% {
+    transform: translateY(0) ;
+  }
+  50% {
+    transform: translateY(-25px);
+    
+  }
+}
