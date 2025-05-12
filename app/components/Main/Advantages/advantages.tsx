@@ -23,18 +23,18 @@ export const Advantages = () => {
     
         });
     const isInViewTwo = useInView(twoRef, {
-    once: true, // Анимация сработает только один раз
-    margin: "-10px 0px -10px 0px", // Регулирует зону срабатывания
+    once: true, 
+    margin: "-10px 0px -10px 0px", 
     
   });
   const isInViewThree = useInView(threeRef, {
-    once: true, // Анимация сработает только один раз
-    margin: "-10px 0px -10px 0px", // Регулирует зону срабатывания
+    once: true, 
+    margin: "-10px 0px -10px 0px", 
     
   });
   const isInViewFour = useInView(fourRef, {
-    once: true, // Анимация сработает только один раз
-    margin: "-10px 0px -10px 0px", // Регулирует зону срабатывания
+    once: true, 
+    margin: "-10px 0px -10px 0px", 
     
   });
 
@@ -58,27 +58,27 @@ export const Advantages = () => {
                         <motion.li 
     initial={{ opacity: 0, y: 300 }}
     animate={isInView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 1.2, ease: "easeInOut" }}>
-                            <Image src={text.advantages.icon.one} alt="icon" className={styles.icon} width={150} height={150}/>
+    transition={{ duration: 0.8, ease: "easeInOut" }}>
+                            <Image src={text.advantages.icon.one} alt="icon" className={styles.icon} width={150} height={150} />
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_1}</Ptag>
                         </motion.li>
                         <motion.li ref={twoRef}
     initial={{ opacity: 0, y: 300 }}
-    animate={isInViewTwo ? { opacity: 1.2, y: 0 } : {}}
+    animate={isInViewTwo ? { opacity: 0.8, y: 0 } : {}}
     transition={{ duration: 1, ease: "easeInOut" }}>
-                            <Image src={text.advantages.icon.two} alt="icon" className={styles.icon} width={150} height={150}/>
+                            <Image src={text.advantages.icon.two} alt="icon" className={styles.icon} width={150} height={150} />
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_2}</Ptag>
                         </motion.li>
                         <motion.li ref={threeRef}
-                        initial={{ opacity: 0, y: 300 }}
-                        animate={isInViewThree ? { opacity: 1.2, y: 0 } : {}}
+                        initial={{ opacity: 0, y: 0 }}
+                        animate={isInViewThree ? { opacity: 0.8, y: 0 } : {}}
                         transition={{ duration: 1, ease: "easeInOut" }}>
                             <Image src={text.advantages.icon.three} alt="icon" className={styles.icon} width={150} height={150}/>
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_3}</Ptag>
                         </motion.li>
                         <motion.li ref={fourRef}
-                        initial={{ opacity: 0, y: 300 }}
-                        animate={isInViewFour ? { opacity: 1.2, y: 0 } : {}}
+                        initial={{ opacity: 0, y: 0 }}
+                        animate={isInViewFour ? { opacity: 0.8, y: 0 } : {}}
                         transition={{ duration: 1, ease: "easeInOut" }}>
                             <Image src={text.advantages.icon.four} alt="icon" className={styles.icon} width={150} height={150}/>
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_4}</Ptag>

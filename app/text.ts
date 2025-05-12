@@ -61,7 +61,7 @@ export const text = {
         },
 
     },
-    slider: ['slider/slider1.jpg','slider/slider2.jpg','slider/slider3.jpg','slider/slider6.jpg','slider/slider4.jpg','slider/slider5.jpg'],
+    slider: ['/slider/slider1.jpg','/slider/slider2.jpg','/slider/slider3.jpg','/slider/slider6.jpg','/slider/slider4.jpg','/slider/slider5.jpg'],
     contacts: {
         phone: "8 (800) 707-42-14",
         email: "info@vertex-pro.ru",
