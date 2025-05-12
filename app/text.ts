@@ -34,12 +34,12 @@ export const text = {
         advantage_2: "Интенсивные ощущения и яркие оргазмы",
         advantage_3: "Универсальный ключ к удовольствию",
         advantage_4: "Незаменим с секс-игрушками",
-        image: 'adv.jpg',
+        image: '/adv.jpg',
         icon:{
-            one: 'iconOne.png',
-            two: 'iconTwo.png',
-            three: 'iconthree.png',
-            four: 'iconFour.png'
+            one: '/iconOne.png',
+            two: '/iconTwo.png',
+            three: '/iconthree.png',
+            four: '/iconFour.png'
         }
     },
     why: {
@@ -68,6 +68,6 @@ export const text = {
         adress: "г. Нижний Новгород, Маршала Казакова, 3а",
         work: "пн-пт с 8:30 до 17:30",
         link: "https://vertex-pro.ru",
-        image: "iconOne.png"
+        image: "/iconOne.png"
     }
 }

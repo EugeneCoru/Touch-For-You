@@ -5,8 +5,7 @@ import Image from 'next/image';
 import { positions } from './utils';
 import { Htag } from '../../Htag/htag';
 import { Ptag } from '../../Ptag/ptag';
-import { Glare, NeonGlow } from '../../Сircle/glare';
-import { RandomFlicker } from '../../RandomFlicker/randomFlicker';
+import { Glare } from '../../Сircle/glare';
 import { Button } from '../../Button/button';
 
 
@@ -17,11 +16,11 @@ export const Randomizer = ()=>{
   // Флаг состояния вращения, чтобы игнорировать повторные клики
   const [isSpinning, setIsSpinning] = useState(false);
   // Индекс выбранной позиции (для подсветки и модального окна)
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   // Флаг отображения модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
   // Используем ref для хранения запланированного выбранного индекса во время вращения
-  const plannedIndex = useRef(null);
+  const plannedIndex = useRef<number | null>(null);
 
 
 
@@ -36,7 +35,7 @@ export const Randomizer = ()=>{
 
     // Случайно выбираем одну из 4 поз
     const targetIdx = Math.floor(Math.random() * positions.length);
-    plannedIndex.current = targetIdx;
+    plannedIndex.current = targetIdx as number;
 
     // Вычисляем конечный угол вращения бутылки, чтобы она указывала на выбранный квадрат
     const currentRotation = angle % 360;
@@ -82,19 +81,18 @@ export const Randomizer = ()=>{
           key={pos.id} 
           className={`${styles.square} ${styles[pos.id]} ${selectedIndex === index ? styles.selected : ''}`}
         >
-        <img src={pos.image} alt="icon" className={styles.icon}/>
+        <Image src={pos.image} alt="icon" className={styles.icon} width={200} height={150} unoptimized/>
         </div>
       ))}
 
       {/* Изображение бутылки в центре. При клике запускается вращение. */}
-      <img
-        src="lubric_berry.png"        /* путь к изображению бутылки (замените на фактический) */
+      
+      <Image src="/lubric_berry.png"        /* путь к изображению бутылки (замените на фактический) */
         alt="Бутылка"
         className={`${styles.bottleImage} ${isSpinning ? styles.spinning : ''}`}
         style={{ transform: `rotate(${angle}deg)` }}
         onClick={handleSpin}
-        onTransitionEnd={handleTransitionEnd}
-      />
+        onTransitionEnd={handleTransitionEnd} width={200} height={500} unoptimized/>
 
       {/* Модальное окно с информацией о выбранной позе */}
       {isModalOpen && selectedIndex !== null && (

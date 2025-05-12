@@ -1,5 +1,3 @@
-import { Htag } from "../Htag/htag"
-import { Ptag } from "../Ptag/ptag"
 import styles from './footer.module.scss'
 
 

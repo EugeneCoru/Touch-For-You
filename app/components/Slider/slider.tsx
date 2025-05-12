@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import { useEffect, useRef, useState } from "react";
 import { ImageSliderProps } from "./slider.props";
 import styles from "./slider.module.scss";
-
+import Image from "next/image";
 
 
 export const ImageSlider = ({
@@ -51,12 +53,11 @@ export const ImageSlider = ({
                 <div className={styles.shadow_down}></div>
 
 
-                <img 
-                  src={image} 
+                
+                  <Image src={image} 
                   alt={`Slide ${index * 2 + idx + 1}`} 
                   className={styles.image}
-                  loading="lazy"
-                />
+                  loading="lazy" width={500} height={500}/>
               </div>
             ))}
           </div>

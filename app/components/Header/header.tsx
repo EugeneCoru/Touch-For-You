@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from './header.module.scss'
-import Logo from '../../../public/file.svg'
 import { Button } from '../Button/button'
 import { Burger } from '../Burger/burger'
 import { Nav } from '../Nav/nav'

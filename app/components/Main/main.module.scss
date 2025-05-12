@@ -1,17 +1,2 @@
 
 
-.wrapper {
-    display: grid;
-    grid-template-rows: auto auto; // Явное определение двух строк
-    gap: 2rem;
-    
-  }
-  
-  .container_prod {
-    grid-row: 1; // Явное размещение в первой строке
-    position: relative; // Если нужно позиционирование внутри контейнера
-  }
-  
-  .container_adv {
-    grid-row: 2; // Явное размещение во второй строке
-  }

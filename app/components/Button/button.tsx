@@ -1,15 +1,14 @@
 
-import { JSX } from "react"
 import { ButtonProps } from "./button.props"
 import classNames from 'classnames';
 import styles from './button.module.scss'
-import { text } from "@/app/text";
 import Link from "next/link";
+import { JSX } from "react";
 //import { Link } from 'react-scroll';
 
 
 
-export const Button = ({children, font, color, link,targ=true, target='_parent', className, ...props }: ButtonProps):JSX.Element =>{
+export const Button = ({children, font, color, link,targ=true, target='_parent', className,  ...props }: ButtonProps): JSX.Element | undefined =>{
 
     // Для внутренних маршрутов (React Router)
   if (link && !targ) {
@@ -35,6 +34,7 @@ export const Button = ({children, font, color, link,targ=true, target='_parent',
   // Для внешних ссылок
   if (link && targ) {
     return (
+      <>
       <a
         href={link}
         className={classNames(styles.button,className, {
@@ -51,6 +51,7 @@ export const Button = ({children, font, color, link,targ=true, target='_parent',
       >
         {children}
       </a>
+      </>
     );
   }
 }

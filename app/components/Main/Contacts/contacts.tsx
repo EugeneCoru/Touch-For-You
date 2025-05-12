@@ -2,6 +2,7 @@ import { text } from "@/app/text"
 import { Htag } from "../../Htag/htag"
 import styles from './contacts.module.scss'
 import { Ptag } from "../../Ptag/ptag"
+import Image from "next/image"
 
 
 export const Contacts = ()=>{
@@ -24,7 +25,10 @@ export const Contacts = ()=>{
                 <div className={styles.cont_link_qr}>
                 <a href={text.contacts.link} target="_blank" className={styles.cont_link_qr_text}>Официальный сайт</a>
                 {/* <img src={text.contacts.image} alt="qr-code" /> */}
-                <a href={text.contacts.link} target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" border="0" title="QR код"/></a>
+                <a href={text.contacts.link} target="_blank">
+                    <Image src="http://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" alt="QR код" unoptimized/>
+                    {/* <img src="http://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" border="0" title="QR код"/> */}
+                </a>
                 </div>
             </div>
         </div>

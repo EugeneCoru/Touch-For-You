@@ -8,7 +8,7 @@ import { Ptag } from "../../Ptag/ptag"
 import { Button } from "../../Button/button"
 import styles from "./product.module.scss"
 import { LineNeon } from "../../Line/line"
-import { useEffect, useRef } from "react"
+import {  useRef } from "react"
 import { Glare } from "../../Сircle/glare";
 
 

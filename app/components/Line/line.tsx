@@ -1,8 +1,6 @@
 'use client'
-
 import { CSSProperties, useEffect, useRef } from "react";
 import { NeonPathProps } from "./line.props";
-import styles from './line.module.scss';
 
 
 

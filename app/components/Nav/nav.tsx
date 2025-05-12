@@ -1,5 +1,5 @@
 'use client'
-import { JSX, useState } from 'react'
+import { JSX} from 'react'
 import styles from './nav.module.scss'
 import { NavProps } from './nav.props'
 import cn from 'classnames'

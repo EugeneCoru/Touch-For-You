@@ -5,6 +5,7 @@ import styles from './why.module.scss'
 import { Htag } from "../../Htag/htag"
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image"
 
 
 
@@ -35,7 +36,8 @@ export const Why = ()=>{
                 <div className={styles.shadow_45}></div>
                 <div className={styles.shadow_down}></div>
                 <div className={styles.shadow_315}></div>
-                <img src="why_one.png" alt="image" className={styles.img_left}/>
+                {/* <img src="why_one.png" alt="image" className={styles.img_left}/> */}
+                <Image src="why_one.png" alt="image" className={styles.img_left} width={500} height={500} unoptimized/>
                 </motion.div>
                 <motion.div initial={{ x: 100, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
@@ -58,7 +60,8 @@ export const Why = ()=>{
                 <div className={styles.shadow_45_2}></div>
                 <div className={styles.shadow_down_2}></div>
                 <div className={styles.shadow_315_2}></div>
-                <img src="why_two.png" alt="image" className={styles.img_right}/>
+                {/* <img src="why_two.png" alt="image" className={styles.img_right}/> */}
+                <Image src="why_two.png" alt="image" className={styles.img_right} width={500} height={500} unoptimized/>
                 </motion.div>
                 
             </div>

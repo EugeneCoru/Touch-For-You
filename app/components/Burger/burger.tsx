@@ -3,7 +3,6 @@ import { JSX, useEffect, useRef, useState } from 'react';
 import styles from './burger.module.scss';
 import { BurgerButtonProps } from './burger.props';
 import { Button } from '../Button/button';
-import cn from 'classnames';
 
 
 
@@ -11,7 +10,7 @@ import cn from 'classnames';
 export const Burger = ({ 
     color = '#333', 
     size = 40,
-    menuContent
+    
   }: BurgerButtonProps): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);

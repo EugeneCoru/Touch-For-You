@@ -1,7 +1,6 @@
 
 import { Products } from "./Products/products"
 import { Advantages } from "./Advantages/advantages"
-import styles from "./main.module.scss"
 import { ImageSlider } from "../Slider/slider"
 
 import { Why } from "./Why/why"

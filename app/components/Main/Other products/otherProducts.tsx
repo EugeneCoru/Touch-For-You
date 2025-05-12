@@ -12,18 +12,14 @@ import { useRef } from "react"
 
 export const OtherProducts = ()=>{
     const oneRef = useRef(null);
-    const twoRef = useRef(null);
+
 
     const isInView = useInView(oneRef, {
         once: true, 
         margin: "50px 0px -10px 0px", 
         
             });
-        const isInViewTwo = useInView(twoRef, {
-        once: true, 
-        margin: "-10px 0px -10px 0px",
         
-      });
     return(
         <div className={styles.wrapper}>
             <div className={styles.title_cont}>
