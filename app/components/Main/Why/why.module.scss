@@ -12,7 +12,7 @@
     // }
     .title{
         padding: 0 var(--cont) 0 var(--cont);
-        z-index: 1;
+        //z-index: ;
         position: relative;
         @media screen and (max-width: 767px) {       
             padding: 0 var(--cont_mobile) 0 var(--cont_mobile);
@@ -38,7 +38,8 @@
                 text-align: right;
                 max-width: 530px;
                 position: relative;
-                z-index: 1;
+                
+                z-index: 2;
             }
             
 
@@ -71,7 +72,7 @@
                 text-align: left;
                 max-width: 530px;
                 position: relative;
-                z-index: 1;
+                z-index: 2;
             }
             .img_right{
                 display: block;
@@ -101,6 +102,7 @@
 
 .shadow_up{
     position: absolute;
+    z-index: 1;
     bottom: 0;
     left: 0;
     right: 0;
@@ -116,6 +118,7 @@
    }
 .shadow_down{
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -143,10 +146,12 @@
     
     //background-color: red;
     pointer-events: none;
-    //z-index: 100;
+    z-index: 1;
+    
    }
    .shadow_45{
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: -50%;
     right: 10%;
@@ -165,6 +170,7 @@
    }
    .shadow_315{
     position: absolute;
+    z-index: 1;
     top: -50%;
     bottom: 0;
     right: 10%;
@@ -184,6 +190,7 @@
    //второй блок
    .shadow_up_2{
     position: absolute;
+    z-index: 1;
     bottom: 0;
     left: 0;
     right: 0;
@@ -199,6 +206,7 @@
    }
 .shadow_down_2{
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -214,6 +222,7 @@
    }
    .shadow_right_2{
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -230,9 +239,10 @@
    }
    .shadow_45_2{
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: -50%;
-    left: 10%;
+    left: 12%;
     //height: 100px;
     width: 40%; /* Регулируйте высоту градиента */
     background: linear-gradient(
@@ -248,9 +258,10 @@
    }
    .shadow_315_2{
     position: absolute;
+    z-index: 1;
     top: -50%;
     bottom: 0;
-    left: 10%;
+    left: 12%;
     width: 40%; /* Регулируйте высоту градиента */
     background: linear-gradient(
         to left,

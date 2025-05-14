@@ -24,7 +24,11 @@
   --desktop: 1210px;
   --tablet: 860px;
   --mobile: 480px;
-}
+
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+
+  }
 
 @media (prefers-color-scheme: dark) {
   :root {

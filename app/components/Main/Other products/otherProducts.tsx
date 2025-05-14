@@ -27,7 +27,7 @@ export const OtherProducts = ()=>{
             <Ptag font='extra-light' size='small' className={styles.p}>Познакомьтесь с другими товарами бренда Touch for You</Ptag>
             </div>
             <motion.div className={styles.cont} ref={oneRef} 
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease: "easeInOut" }}>
                 <div className={styles.shadow_up}></div>

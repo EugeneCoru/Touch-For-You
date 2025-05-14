@@ -1,14 +1,15 @@
 
 
 .htag{
-    font-family: var(--font-p);
+    font-family: var(--font-montserrat);
+    font-size: 64px;
     font-weight: 400;
     z-index: 1;
 }
 
 .large{
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 200;
     @media screen and (max-width: 767px) {
         font-size: 20px;
     }

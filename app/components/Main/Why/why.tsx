@@ -49,7 +49,7 @@ export const Why = ()=>{
                 <motion.div initial={{ x: -100, opacity: 0 }}
                 animate={isInViewTwo ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 1.4, delay: 0.2 }}>
-                <Ptag font='regular' size='large' className={styles.p_right}>{text.why.text_2}</Ptag>
+                <Ptag font='light' size='large' className={styles.p_right}>{text.why.text_2}</Ptag>
                 </motion.div>
                 <motion.div className={styles.cont_shadow} 
                 initial={{ x: 100, opacity: 0 }}

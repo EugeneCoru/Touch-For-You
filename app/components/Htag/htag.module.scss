@@ -1,7 +1,7 @@
 
 
 .htag{
-    font-family: var(--font-h);
+    font-family: var(--font-inter);
     text-shadow: 
     0 0 10px rgba(73, 218, 245, 0.9),
     0 0 20px rgba(73, 218, 245, 0.5),
@@ -9,7 +9,7 @@
     font-weight: 400;
     //animation: glow-pulse 2s infinite;;
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 .large{
