@@ -69,7 +69,7 @@ export const Randomizer = ()=>{
   return (
     <div className={styles.wrapper} id='randomizer'>
       
-        <Htag size="large">КРУТИ И ДЕЙСТВУЙ</Htag>
+        <Htag size="large" className={styles.title}>КРУТИ И ДЕЙСТВУЙ</Htag>
         <Ptag font='regular' size='medium' className={styles.ptag}>«Куда укажет бутылочка? Открой свою позу на сегодня.Начни игру с прикосновений»</Ptag>
       
    
@@ -100,7 +100,7 @@ export const Randomizer = ()=>{
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <h2>{positions[selectedIndex].name}</h2>
              <p>{positions[selectedIndex].description}</p>
-            <Button font='medium' color='neon' targ={false} link='#blog'>Подробнее</Button>
+            <Button font='medium' color='neon' targ={false} link='/poses' className={styles.btn}>Подробнее</Button>
             <button onClick={handleCloseModal}>Закрыть</button>
           </div>
         </div>

@@ -8,10 +8,12 @@ import { JSX } from "react";
 
 
 
-export const Button = ({children, font, color, link,targ=true, target='_parent', className,  ...props }: ButtonProps): JSX.Element | undefined =>{
+export const Button = ({children, font, color, link,targ=true, className,  ...props }: ButtonProps): JSX.Element | undefined =>{
 
     // Для внутренних маршрутов (React Router)
-  if (link && !targ) {
+  if (link && targ==false) {
+    console.log("no zaebis");
+    
     return (
       <Link
        href={link}
@@ -22,10 +24,8 @@ export const Button = ({children, font, color, link,targ=true, target='_parent',
             [styles.blue]: color === 'blue',
             [styles.neon]: color === 'neon',
         })}
-        
-        role="button"
-        
-      >
+        target="_parent"
+        >
         {children}
       </Link>
     );
@@ -45,7 +45,7 @@ export const Button = ({children, font, color, link,targ=true, target='_parent',
             [styles.neon]: color === 'neon',
         })}
         {...props}
-        target={target}
+        target="_blank"
         
         role="button"
       >
@@ -53,7 +53,10 @@ export const Button = ({children, font, color, link,targ=true, target='_parent',
       </a>
       </>
     );
+    
   }
+
+  
 }
 
 {/* <button className={classNames(styles.button,className, {

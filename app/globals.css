@@ -45,7 +45,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--white);
   background: var(--back-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -8,7 +8,7 @@ import Image from "next/image"
 export const Contacts = ()=>{
     
     return(
-       <div className={styles.wrapper} id="contacts">
+       <div className={styles.wrapper}>
         <Htag size='large'>КОНТАКТЫ</Htag>
         <div className={styles.cont}>
             <div className={styles.cont_content}>
@@ -26,7 +26,7 @@ export const Contacts = ()=>{
                 <a href={text.contacts.link} target="_blank" className={styles.cont_link_qr_text}>Официальный сайт</a>
                 {/* <img src={text.contacts.image} alt="qr-code" /> */}
                 <a href={text.contacts.link} target="_blank">
-                    <Image src="http://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" alt="QR код" unoptimized/>
+                    <Image src="https://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" alt="QR код" unoptimized/>
                     {/* <img src="http://qrcoder.ru/code/?https%3A%2F%2Fvertex-pro.ru&4&0" width="132" height="132" border="0" title="QR код"/> */}
                 </a>
                 </div>

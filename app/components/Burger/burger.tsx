@@ -1,8 +1,9 @@
 'use client'
-import { JSX, useEffect, useRef, useState } from 'react';
+import { JSX, lazy, useEffect, useRef, useState } from 'react';
 import styles from './burger.module.scss';
 import { BurgerButtonProps } from './burger.props';
 import { Button } from '../Button/button';
+import Link from 'next/link';
 
 
 
@@ -51,11 +52,13 @@ export const Burger = ({
         <div className={`${styles.menu} ${isOpen ? styles.active : ''}`}>
           <div className={styles.menuContent}>
           <nav className={styles.nav} >
-                <a href="#main" className={styles.a} onClick={() => setIsOpen(false)}>главная</a>
-                <a href="#products" className={`${styles.a}`} onClick={() => setIsOpen(false)}>продукция</a>
-                {/* <a href="#blog" className={styles.a} onClick={() => setIsOpen(false)}>блог</a> */}
-                <a href="#contacts" className={styles.a} onClick={() => setIsOpen(false)}>контакты</a>
-                <Button font='medium' color='neon' className={styles.btn} link='#randomizer' targ={true} onClick={() => setIsOpen(false)}>ПОИГРАЕМ?</Button>
+                
+                <Link href='/#main' className={styles.a} onClick={() => setIsOpen(false)}>главная</Link>
+                <Link href='/#products' className={styles.a} onClick={() => setIsOpen(false)}>продукция</Link>
+                <Link href='/poses' className={styles.a} onClick={() => setIsOpen(false)}>позы</Link>
+                <Link href='/#contacts' className={styles.a} onClick={() => setIsOpen(false)}>контакты</Link>
+                {/* <Link href='/#randomizer' className={styles.btn} onClick={() => setIsOpen(false)} >ПОИГРАЕМ?</Link> */}
+                <Button font='medium' color='neon' className={styles.adaptive}  targ={false} link='/#randomizer' onClick={() => setIsOpen(false)}>ПОИГРАЕМ?</Button>
 
             </nav>
           </div>

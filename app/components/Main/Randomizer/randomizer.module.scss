@@ -11,6 +11,9 @@
     @media screen and (max-width: 767px) {
         padding: var(--up-h) var(--cont_mobile) 60px var(--cont_mobile);
     }
+    .title{
+      text-align: center;
+    }
     .ptag{
         max-width: 475px;
         text-align: center;
@@ -157,4 +160,8 @@
   .modalContent button:hover {
     background: #6c6c6c;
   }
+}
+
+.btn{
+  margin-right: 10px;
 }

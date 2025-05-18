@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['qrcoder.ru'],
   },
+  remotePatterns: [
+  {
+    protocol: 'https',
+    hostname: '**.example.com',
+    pathname: '/**',
+  },
+]
 };
 
 export default nextConfig;
