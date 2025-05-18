@@ -1,5 +1,5 @@
 'use client'
-import { JSX, lazy, useEffect, useRef, useState } from 'react';
+import { JSX, useEffect, useRef, useState } from 'react';
 import styles from './burger.module.scss';
 import { BurgerButtonProps } from './burger.props';
 import { Button } from '../Button/button';

@@ -8,12 +8,11 @@ import { Htag } from "@/app/components/Htag/htag";
 import { Ptag } from "@/app/components/Ptag/ptag";
 import styles from "./poses.module.scss";
 import { Glare } from "@/app/components/Сircle/glare";
-import { PosesProps } from "./poses.props";
 import { JSX } from "react";
 
 
 
-export default function Poses({y}: PosesProps):JSX.Element {
+export default function Poses():JSX.Element {
 
 
   return (

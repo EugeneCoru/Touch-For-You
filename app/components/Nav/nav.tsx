@@ -3,7 +3,6 @@ import { JSX, useEffect, useRef, useState} from 'react'
 import styles from './nav.module.scss'
 import { NavProps } from './nav.props'
 import cn from 'classnames'
-import { Button } from '../Button/button'
 import Link from 'next/link'
 
 
