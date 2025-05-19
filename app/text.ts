@@ -13,7 +13,7 @@ export const text = {
         classic: {
             title: "Натуральный интимный гель на водной основе Touchforyou (классический), 200 мл",
             description: "Инструмент для укрепления близости, создания незабываемых моментов и повседневного комфорта. Выбирайте классику. Выбирайте доверие. Выбирайте Touch for You.",
-            image: "../public/lubric_classic.png",
+            image: "../public/lubric_classic.webp",
             link: {
                 wb: "https://www.wildberries.ru/catalog/391224001/detail.aspx",
                 oz: "https://www.ozon.ru/product/smazka-intimnaya-lubrikant-na-vodnoy-osnove-naturalnaya-universalnaya-klassicheskiy-touch-for-you-2035334814/?from_sku=2035345184&oos_search=false"
@@ -22,7 +22,7 @@ export const text = {
         berry: {
             title: "Натуральный интимный гель на водной основе Touchforyou (малина), 200 мл",
             description: "Идеальное сочетание надежности и чувственных наслаждений, созданное для тех, кто ценит яркие эмоции и заботу о комфорте. Насладитесь нежным ароматом спелой малины и мягкой текстурой, которая обеспечивает мгновенное увлажнение, долговременную гладкость и абсолютную безопасность даже для чувствительной кожи.",
-            image: "../public/lubric_classic.png",
+            image: "../public/lubric_classic.webp",
             link: {
                 wb: "https://www.wildberries.ru/catalog/391224002/detail.aspx?targetUrl=EX",
                 oz: "https://www.ozon.ru/product/2035345184/"
@@ -34,12 +34,12 @@ export const text = {
         advantage_2: "Интенсивные ощущения и яркие оргазмы",
         advantage_3: "Универсальный ключ к удовольствию",
         advantage_4: "Незаменим с секс-игрушками",
-        image: '/adv.jpg',
+        image: '/adv.webp',
         icon:{
-            one: '/iconOne.png',
-            two: '/iconTwo.png',
-            three: '/iconthree.png',
-            four: '/iconFour.png'
+            one: '/iconOne.webp',
+            two: '/iconTwo.webp',
+            three: '/iconthree.webp',
+            four: '/iconFour.webp'
         }
     },
     why: {
@@ -61,13 +61,13 @@ export const text = {
         },
 
     },
-    slider: ['/slider/slider1.jpg','/slider/slider2.jpg','/slider/slider3.jpg','/slider/slider6.jpg','/slider/slider4.jpg','/slider/slider5.jpg'],
+    slider: ['/slider/slider1.webp','/slider/slider2.webp','/slider/slider3.webp','/slider/slider6.webp','/slider/slider4.webp','/slider/slider5.webp'],
     contacts: {
         phone: "8 (800) 707-42-14",
         email: "info@vertex-pro.ru",
         adress: "г. Нижний Новгород, Маршала Казакова, 3а",
         work: "пн-пт с 8:30 до 17:30",
         link: "https://vertex-pro.ru",
-        image: "/iconOne.png"
+        image: "/iconOne.webp"
     }
 }

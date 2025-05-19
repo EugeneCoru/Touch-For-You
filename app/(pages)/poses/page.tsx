@@ -27,7 +27,7 @@ export default function Poses():JSX.Element {
                   <Htag size="medium">{variantPose.name}</Htag>
                   <Ptag className={styles.description}>{variantPose.description}</Ptag>
                   </div>
-                  <Image quality={50} src={variantPose.img} width={500} height={500} alt={variantPose.name} className={styles.img}/>
+                  <Image loading="lazy"  quality={50} src={variantPose.img} width={500} height={500} alt={variantPose.name} className={styles.img}/>
 
                 </div>)}</div>
                 </div>)

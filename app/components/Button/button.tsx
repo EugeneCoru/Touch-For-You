@@ -12,7 +12,7 @@ export const Button = ({children, font, color, link,targ=true, className,  ...pr
 
     // Для внутренних маршрутов (React Router)
   if (link && targ==false) {
-    console.log("no zaebis");
+   
     
     return (
       <Link

@@ -47,7 +47,7 @@ export const Advantages = () => {
             <div className={styles.container}>
                 <div className={styles.cont_video}>
                 {/* <img src={text.advantages.image} alt="img" className={styles.video}/> */}
-                <Image quality={75} src={text.advantages.image} alt='image' className={styles.video} width={1000} height={1000}/>
+                <Image loading="lazy" quality={75} src={text.advantages.image} alt='image' className={styles.video} width={1000} height={1000}/>
                 <div className={styles.shadow}></div>
                 <div className={styles.shadow_left}></div>
                 <div className={styles.shadow_right}></div>
@@ -59,28 +59,28 @@ export const Advantages = () => {
     initial={{ opacity: 0, y: 100 }}
     animate={isInView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.8, ease: "easeInOut" }}>
-                            <Image quality={75} src={text.advantages.icon.one} alt="icon" className={styles.icon} width={150} height={150} />
+                            <Image  loading="lazy" quality={75} src={text.advantages.icon.one} alt="icon" className={styles.icon} width={150} height={150} />
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_1}</Ptag>
                         </motion.li>
                         <motion.li ref={twoRef}
     initial={{ opacity: 0, y: 100 }}
     animate={isInViewTwo ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 1, ease: "easeInOut" }}>
-                            <Image quality={75} src={text.advantages.icon.two} alt="icon" className={styles.icon} width={150} height={150} />
+                            <Image loading="lazy" quality={75} src={text.advantages.icon.two} alt="icon" className={styles.icon} width={150} height={150} />
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_2}</Ptag>
                         </motion.li>
                         <motion.li ref={threeRef}
                         initial={{ opacity: 0, y: 100 }}
                         animate={isInViewThree ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 1, ease: "easeInOut" }}>
-                            <Image quality={75} src={text.advantages.icon.three} alt="icon" className={styles.icon} width={150} height={150}/>
+                            <Image loading="lazy" quality={75} src={text.advantages.icon.three} alt="icon" className={styles.icon} width={150} height={150}/>
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_3}</Ptag>
                         </motion.li>
                         <motion.li ref={fourRef}
                         initial={{ opacity: 0, y: 100 }}
                         animate={isInViewFour ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 1, ease: "easeInOut" }}>
-                            <Image  quality={75} src={text.advantages.icon.four} alt="icon" className={styles.icon} width={150} height={150}/>
+                            <Image  loading="lazy" quality={75} src={text.advantages.icon.four} alt="icon" className={styles.icon} width={150} height={150}/>
                             <Ptag font='regular' size='medium'>{text.advantages.advantage_4}</Ptag>
                         </motion.li>
                     </ul>

@@ -50,7 +50,7 @@ export const Products = () =>{
     initial={{ opacity: 0, y: 300 }}
     animate={isInView ? { opacity: 1.5, y: 0 } : {}}
     transition={{ duration: 1, ease: "easeInOut" }}>
-                    <img src="lubric_berry.png" alt="img" className={`${styles.cont_img_berry} ${styles.cont_img}`}/>
+                    <img src="lubric_berry.webp" alt="img" className={`${styles.cont_img_berry} ${styles.cont_img}`}/>
                     <div className={styles.cont_content}>
                         <Htag size="medium" className={styles.cont_title}>{text.products.berry.title}</Htag>
                         <Ptag size="medium" font="extra-light" className={styles.cont_desc}>{text.products.berry.description}</Ptag>
@@ -74,7 +74,7 @@ export const Products = () =>{
                         <Button font="extra-light" color="pink" target="_blank" link={text.products.classic.link.wb}>WB</Button>
                         </div>                     
                     </div>
-                    <img src="lubric_classic.png" alt="img" className={`${styles.cont_img_classic}`}/>
+                    <img src="lubric_classic.webp" alt="img" className={`${styles.cont_img_classic}`}/>
                 </motion.div>
             </div>
 
