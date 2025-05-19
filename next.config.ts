@@ -10,8 +10,9 @@ const nextConfig: NextConfig = {
     protocol: 'https',
     hostname: '**.example.com',
     pathname: '/**',
-  },
-]
+  },  
+],
+ 
 };
 
 export default nextConfig;

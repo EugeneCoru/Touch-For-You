@@ -28,7 +28,7 @@ export const Why = ()=>{
             <div className={styles.cont}>
             <div className={`${styles.cont_left} ${styles.content}`} >
                 <motion.div className={styles.cont_shadow} 
-    initial={{ x: -100, opacity: 0 }}
+    initial={{ x: 0, opacity: 0 }}
     animate={isInView ? { x: 0, opacity: 1 } : {}}
     transition={{ duration: 1.4, delay: 0.2 }}>
                 <div className={styles.shadow_up}></div>
@@ -37,22 +37,22 @@ export const Why = ()=>{
                 <div className={styles.shadow_down}></div>
                 <div className={styles.shadow_315}></div>
                 {/* <img src="why_one.png" alt="image" className={styles.img_left}/> */}
-                <Image src="why_one.png" alt="image" className={styles.img_left} width={500} height={500} unoptimized/>
+                <Image quality={1} src="/why_one.png" alt="image" className={styles.img_left} width={500} height={500} />
                 </motion.div>
-                <motion.div initial={{ x: 100, opacity: 0 }}
+                <motion.div initial={{ x: 0, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 1.4, delay: 0.2 }}>
                 <Ptag font='extra-light' size='large' className={styles.p_left}>{text.why.text_1}</Ptag>
                 </motion.div>
             </div>
             <div className={`${styles.cont_right} ${styles.content}`} ref={containerRefTwo}>
-                <motion.div initial={{ x: -100, opacity: 0 }}
+                <motion.div initial={{ x:0, opacity: 0 }}
                 animate={isInViewTwo ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 1.4, delay: 0.2 }}>
                 <Ptag font='light' size='large' className={styles.p_right}>{text.why.text_2}</Ptag>
                 </motion.div>
                 <motion.div className={styles.cont_shadow} 
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ x: 0, opacity: 0 }}
                 animate={isInViewTwo ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 1.4, delay: 0.2 }}>
                 <div className={styles.shadow_up_2}></div>
@@ -61,7 +61,7 @@ export const Why = ()=>{
                 <div className={styles.shadow_down_2}></div>
                 <div className={styles.shadow_315_2}></div>
                 {/* <img src="why_two.png" alt="image" className={styles.img_right}/> */}
-                <Image src="why_two.png" alt="image" className={styles.img_right} width={500} height={500} unoptimized/>
+                <Image src="/why_two.png" alt="image" className={styles.img_right} width={500} height={500} />
                 </motion.div>
                 
             </div>

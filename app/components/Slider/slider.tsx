@@ -7,7 +7,7 @@ import styles from "./slider.module.scss";
 import Image from "next/image";
 
 
-export const ImageSlider = ({
+export const ImageSlider =  ({
   images,
   autoPlay = true,
   interval = 5000
@@ -54,7 +54,9 @@ export const ImageSlider = ({
 
 
                 
-                  <Image src={image} 
+                  <Image 
+                  quality={75}
+                  src={image} 
                   alt={`Slide ${index * 2 + idx + 1}`} 
                   className={styles.image}
                   loading="lazy" width={500} height={500}/>

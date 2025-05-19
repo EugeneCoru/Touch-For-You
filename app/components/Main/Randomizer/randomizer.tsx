@@ -7,6 +7,7 @@ import { Htag } from '../../Htag/htag';
 import { Ptag } from '../../Ptag/ptag';
 import { Glare } from '../../Сircle/glare';
 import { Button } from '../../Button/button';
+import { motion, useInView } from 'framer-motion';
 
 
 
@@ -66,8 +67,17 @@ export const Randomizer = ()=>{
     }
   };
 
+  const containerRef = useRef(null);
+  
+  const isInView = useInView(containerRef, {
+    once: true, 
+    margin: "-50px", 
+  });
+
   return (
-    <div className={styles.wrapper} id='randomizer'>
+    <motion.div className={styles.wrapper} id='randomizer' initial={{ x: 0, opacity: 0 }} ref={containerRef}
+                animate={isInView ? { x: 0, opacity: 1 } : {}}
+                transition={{ duration: 2.4, delay: 0.2 }}>
       
         <Htag size="large" className={styles.title}>КРУТИ И ДЕЙСТВУЙ</Htag>
         <Ptag font='regular' size='medium' className={styles.ptag}>«Куда укажет бутылочка? Открой свою позу на сегодня.Начни игру с прикосновений»</Ptag>
@@ -81,13 +91,13 @@ export const Randomizer = ()=>{
           key={pos.id} 
           className={`${styles.square} ${styles[pos.id]} ${selectedIndex === index ? styles.selected : ''}`}
         >
-        <Image src={pos.image} alt="icon" className={styles.icon} width={200} height={150} unoptimized/>
+        <Image quality={50} src={pos.image} alt="icon" className={styles.icon} width={200} height={150} unoptimized/>
         </div>
       ))}
 
       {/* Изображение бутылки в центре. При клике запускается вращение. */}
       
-      <Image src="/lubric_berry.png"        /* путь к изображению бутылки (замените на фактический) */
+      <Image quality={50} src="/lubric_berry.png"        /* путь к изображению бутылки (замените на фактический) */
         alt="Бутылка"
         className={`${styles.bottleImage} ${isSpinning ? styles.spinning : ''}`}
         style={{ transform: `rotate(${angle}deg)` }}
@@ -114,6 +124,6 @@ export const Randomizer = ()=>{
     <Glare color='white' top='60%' left='30%' />
     <Glare color='' top='80%' left='10%' />
     <Glare color='#C307A6' top='20%' left='80%' />
-    </div>
+    </motion.div>
   );
 };
