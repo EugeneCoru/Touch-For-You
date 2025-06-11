@@ -7,7 +7,7 @@ import { Htag } from '../../Htag/htag';
 import { Ptag } from '../../Ptag/ptag';
 import { Glare } from '../../Сircle/glare';
 import { Button } from '../../Button/button';
-import { motion, useInView } from 'framer-motion';
+// import { motion, useInView } from 'framer-motion';
 
 
 
@@ -67,17 +67,10 @@ export const Randomizer = ()=>{
     }
   };
 
-  const containerRef = useRef(null);
   
-  const isInView = useInView(containerRef, {
-    once: true, 
-    margin: "-50px", 
-  });
 
   return (
-    <motion.div className={styles.wrapper} id='randomizer' initial={{ x: 0, opacity: 0 }} ref={containerRef}
-                animate={isInView ? { x: 0, opacity: 1 } : {}}
-                transition={{ duration: 2.4, delay: 0.2 }}>
+    <div className={styles.wrapper} id='randomizer'>
       
         <Htag size="large" className={styles.title}>КРУТИ И ДЕЙСТВУЙ</Htag>
         <Ptag font='regular' size='medium' className={styles.ptag}>«Куда укажет бутылочка? Открой свою позу на сегодня.Начни игру с прикосновений»</Ptag>
@@ -124,6 +117,6 @@ export const Randomizer = ()=>{
     <Glare color='white' top='60%' left='30%' />
     <Glare color='' top='80%' left='10%' />
     <Glare color='#C307A6' top='20%' left='80%' />
-    </motion.div>
+    </div>
   );
 };
